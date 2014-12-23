@@ -7,7 +7,7 @@ int x;
 int y;
 int n;
 int nn=3;
-int lifenum=3;
+int num=3;
 int disappear=0;
 int currentFrame=0;
 final int GAME_START   = 0;
@@ -114,13 +114,13 @@ void life(){
     ellipse(100+30*n,440,15,15);
      if(myBall.y>height){
     
-   lifenum-=1;
+   num-=1;
    nn-=1;
     myBall.y=height;
     
    status=GAME_START;
      }
-  if(lifenum==0){
+  if(num==0){
   status=GAME_LOSE;
 
   }
@@ -130,7 +130,7 @@ void life(){
   
 void reset(){
    nn=3;
-   lifenum=3;
+   num=3;
     for(int n=0;n<48;n=n+1){
   
     x=(int)50+(int)(n%12)*50;
